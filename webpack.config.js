@@ -4,9 +4,15 @@ var config = {
      path:'/',
      filename: 'index.js',
   },
+  mode: 'development',
   devServer: {
      inline: true,
      port: 8080
+  },node: {
+    net: 'empty',
+    tls: 'empty',
+    dns: 'empty',
+    fs: 'empty'
   },
   module: {
     rules: [
@@ -17,7 +23,8 @@ var config = {
            query: {
               presets: ['es2015', 'react']
            }
-        }
+        },
+       
      ]
   }
 }
